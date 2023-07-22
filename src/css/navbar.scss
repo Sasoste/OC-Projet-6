@@ -1,0 +1,22 @@
+@import "variables";
+
+navbar {
+    font-family: $font-montserrat;
+    ul {
+        list-style: none;
+        display: flex;
+        li {
+            margin: 0 10px;
+            font-size: 24px;
+            a {
+                text-decoration: none;
+                color: $orange;
+                &:hover {
+                    text-decoration: underline;
+                }
+                &.active {
+                    text-decoration: underline;}
+            }
+        }
+    }
+}

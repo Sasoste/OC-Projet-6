@@ -1,0 +1,36 @@
+@import "variables";
+
+.description {
+  font-family: $font-montserrat;
+  color: $orange;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  .block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .leftBlock {
+      min-width: 50%;
+    }
+
+    .rightBlock {
+      display: flex;
+      flex-direction: column;
+      min-width: 50%;
+      justify-content: right; 
+
+      .host {
+        display: flex;
+        align-items: center;
+
+        img {
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}

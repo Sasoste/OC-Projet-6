@@ -33,14 +33,15 @@ function Carrousel() {
   }
 
   return (
-    <div>
-      <button onClick={handlePrevious}>
+    <div className="carousel">
+      <button className="leftButton" onClick={handlePrevious}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <img src={item.pictures[index]} alt={item.title} />
-      <button onClick={handleNext}>
+      <button className="rightButton" onClick={handleNext}>
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
+      <p className="counter">{index + 1} / {length}</p>
     </div>
   );
 }

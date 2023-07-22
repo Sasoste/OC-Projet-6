@@ -17,7 +17,7 @@ function Rating() {
     stars.push(<FontAwesomeIcon key={i} icon={faStar} />);
   }
   return (
-        <div>
+        <div className="rating">
             {stars}
         </div>
     )

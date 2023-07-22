@@ -14,23 +14,34 @@ function Description() {
   }
 
   return (
-    <>
+    <div className="description">
       <Carrousel />
-      <div classname="leftBlock">
-        <h1 className="title">{item.title}</h1>
-        <p className="location">{item.location}</p>
-        <p className="tags">{item.tags}</p>
+      <div className="block">
+        <div className="leftBlock">
+          <h1 className="title">{item.title}</h1>
+          <p className="location">{item.location}</p>
+          <p className="tags">{item.tags}</p>
+          <Collapse title="Description" content={item.description} />
+        </div>
+        <div className="rightBlock">
+          <div className="host">
+            <p className="hostName">{item.host.name}</p>
+            <img className="hostImage" src={item.host.picture} alt="host" />
+          </div>
+          <Rating />
+          <Collapse
+            title="Équipements"
+            content={
+              <ul>
+                {item.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            }
+          />
+        </div>
       </div>
-      <div className="rightBlock">
-        <p className="hostName">{item.host.name}</p>
-        <img className="hostImage" src={item.host.picture}/>
-        <Rating />
-      </div>
-      <div className="collapseBlock">
-        <Collapse title="Description" content={item.description} />
-        <Collapse title="Équipements" content={item.equipments} />
-      </div>
-    </>
+    </div>
   );
 }
 

@@ -1,0 +1,18 @@
+@import "variables";
+
+.footer {
+    font-family: $font-montserrat;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    color: white;
+    padding: 50px 30px 30px 30px;
+
+    img {
+        max-width: 120px;
+        max-height: 40px;
+        margin-bottom: 20px;
+    }
+}
