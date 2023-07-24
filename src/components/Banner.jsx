@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import BannerHome from "../assets/mer.png";
 import BannerAbout from "../assets/montagne.png";
+import "../css/banner.scss";
 
 function Banner() {
   const location = useLocation();
@@ -11,9 +12,11 @@ function Banner() {
   }
 
   return (
-    <div>
+    <div className="banner">
       <img src={imageSrc} alt="Bannière" />
-      {location.pathname === "/" && <p>Chez vous, partout et ailleurs</p>}
+      <div className="overlay">
+        {location.pathname === "/" && <p>Chez vous, partout et ailleurs</p>}
+      </div>
     </div>
   );
 }

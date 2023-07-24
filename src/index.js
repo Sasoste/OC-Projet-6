@@ -1,7 +1,7 @@
+import "./App.scss";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.scss";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./pages/About";

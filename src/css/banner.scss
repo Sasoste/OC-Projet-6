@@ -1,0 +1,38 @@
+@import "variables";
+
+.banner {
+    font-family: $font-montserrat;
+    position: relative; 
+    max-width: 1240px;
+    width: 100%;
+    max-height: 300px; 
+    overflow: hidden; 
+    border-radius: 10px; 
+    display: flex; 
+    justify-content: center; 
+    margin: 2em auto;
+
+    img {
+        width: 100%; 
+        background: rgba(0, 0, 0, 0.5);
+        object-fit: cover;
+        object-position: center; 
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        color: white; 
+        font-size: 48px; 
+    }
+}
