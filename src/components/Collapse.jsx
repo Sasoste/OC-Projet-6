@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import "../css/collapse.scss"
+import "../css/collapse.scss";
 
-function Collapse({title, content}) {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+function Collapse({ title, content }) {
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
-  function toggleCollapse(item) {
+  function toggleCollapse() {
     setIsCollapsed(!isCollapsed);
   }
 
@@ -14,15 +14,12 @@ function Collapse({title, content}) {
     <div className="wrapper">
       <div className="title" onClick={toggleCollapse}>
         {title}
-        {isCollapsed ? (
-          <FontAwesomeIcon icon={faChevronDown} />
-        ) : (
-          <FontAwesomeIcon icon={faChevronUp} />
-        )}
+        <FontAwesomeIcon icon={isCollapsed ? faChevronDown : faChevronUp} />
       </div>
-      {isCollapsed && <div className="content">{content}</div>}
+      <div className={`content ${isCollapsed ? "" : "collapsed"}`}>
+        <div className="contentStyle">{content}</div>
+      </div>
     </div>
   );
 }
-
 export default Collapse;

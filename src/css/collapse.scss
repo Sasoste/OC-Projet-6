@@ -6,13 +6,13 @@
   font-size: 18px;
 
   .title {
-    display:flex;
+    cursor: pointer;
+    display: flex;
     justify-content: space-between;
     background-color: $orange;
     padding: 12px 10px;
     color: white;
-    cursor: pointer;
-    border-radius: 7px;    
+    border-radius: 7px;
   }
   .content {
     background-color: $lightgrey;
@@ -22,7 +22,16 @@
     color: $orange;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
-    padding: 10px;
-    
+    max-height: 0;
+    transition: all 1s ease ;
+    overflow: hidden;
+
+    .contentStyle {
+      padding: 10px;
+    }
+
+    &.collapsed {
+      max-height: 1000px;
+    }
   }
 }
