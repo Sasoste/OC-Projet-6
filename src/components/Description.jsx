@@ -8,6 +8,8 @@ import Logements from "../logements.json";
 function Description() {
   const { id } = useParams();
   const item = Logements.find((item) => item.id === id);
+  const firstName = item.host.name.split(" ")[0];
+  const lastName = item.host.name.split(" ").slice(1).join(" ");
 
   if (!item) {
     return <Navigate to="/error" />;
@@ -16,30 +18,44 @@ function Description() {
   return (
     <div className="description">
       <Carrousel />
+
       <div className="block">
         <div className="leftBlock">
           <h1 className="title">{item.title}</h1>
           <p className="location">{item.location}</p>
-          <p className="tags">{item.tags}</p>
-          <Collapse title="Description" content={item.description} />
+          <div className="tags">
+            {item.tags.map((tag, index) => (
+              <span key={index} className="tag">
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
+
         <div className="rightBlock">
           <div className="host">
-            <p className="hostName">{item.host.name}</p>
+            <p className="hostName">
+              {firstName} <br />
+              {lastName}
+            </p>
             <img className="hostImage" src={item.host.picture} alt="host" />
           </div>
           <Rating />
-          <Collapse
-            title="Équipements"
-            content={
-              <ul>
-                {item.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                ))}
-              </ul>
-            }
-          />
         </div>
+      </div>
+
+      <div className="collapseBlock">
+        <Collapse title="Description" content={item.description} />
+        <Collapse
+          title="Équipements"
+          content={
+            <ul>
+              {item.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          }
+        />
       </div>
     </div>
   );

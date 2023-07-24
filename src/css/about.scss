@@ -1,0 +1,12 @@
+@import "variables";
+
+.about {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+    .wrapper {
+        width: 70%;
+        margin-bottom: 2%;
+    }
+}
