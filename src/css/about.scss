@@ -1,12 +1,23 @@
 @import "variables";
 
 .about {
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .wrapper {
+    width: 70%;
+    margin-bottom: 2%;
+  }
+}
+
+@media (max-width: 1340px) {
+  .about {
+    
+    margin: 0 3%; 
 
     .wrapper {
-        width: 70%;
-        margin-bottom: 2%;
+      width: 100%;
     }
+  }
 }

@@ -6,8 +6,8 @@ function Gallery() {
   return (
     <div className="gallery">
       {Logements.map((logement) => (
-        <Link to={`/logement/${logement.id}`}>
-          <div key={logement.id} className="card">
+        <Link key={logement.id} to={`/logement/${logement.id}`}>
+          <div  className="card">
              <img src={logement.cover} alt={logement.title} />
             <p className="cardTitle">{logement.title}</p>
           </div>

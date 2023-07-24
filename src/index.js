@@ -1,13 +1,13 @@
 import "./App.scss";
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import About from "./pages/About";
-import Error from "./pages/Error";
-import Home from "./pages/Home";
-import Logement from "./pages/Logement";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import About from "./pages/About.jsx";
+import Error from "./pages/Error.jsx";
+import Home from "./pages/Home.jsx";
+import Logement from "./pages/Logement.jsx";
 import Logements from "./logements.json";
 
 const root = document.getElementById("root");

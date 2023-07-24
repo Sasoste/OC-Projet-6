@@ -1,19 +1,20 @@
 import { useParams, Navigate } from "react-router-dom";
 import "../css/description.scss";
-import Collapse from "./Collapse";
-import Carrousel from "./Carrousel";
+import Collapse from "./Collapse.jsx";
+import Carrousel from "./Carrousel.jsx";
 import Rating from "./Rating";
 import Logements from "../logements.json";
 
 function Description() {
   const { id } = useParams();
   const item = Logements.find((item) => item.id === id);
-  const firstName = item.host.name.split(" ")[0];
-  const lastName = item.host.name.split(" ").slice(1).join(" ");
 
   if (!item) {
     return <Navigate to="/error" />;
   }
+
+  const firstName = item.host.name.split(" ")[0];
+  const lastName = item.host.name.split(" ").slice(1).join(" ");
 
   return (
     <div className="description">

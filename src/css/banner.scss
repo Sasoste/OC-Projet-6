@@ -8,15 +8,13 @@
     max-height: 300px; 
     overflow: hidden; 
     border-radius: 10px; 
-    display: flex; 
-    justify-content: center; 
     margin: 2em auto;
+    display: flex; 
 
     img {
         width: 100%; 
         background: rgba(0, 0, 0, 0.5);
         object-fit: cover;
-        object-position: center; 
     }
 
     .overlay {
@@ -36,3 +34,4 @@
         font-size: 48px; 
     }
 }
+

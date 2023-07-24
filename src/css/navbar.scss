@@ -1,22 +1,33 @@
 @import "variables";
 
-navbar {
-    font-family: $font-montserrat;
-    ul {
-        list-style: none;
-        display: flex;
-        li {
-            margin: 0 0 0 60px;
-            font-size: 24px;
-            a {
-                text-decoration: none;
-                color: $orange;
-                &:hover {
-                    text-decoration: underline;
-                }
-                &.active {
-                    text-decoration: underline;}
-            }
+nav {
+  font-family: $font-montserrat;
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin: 0 0 0 60px;
+      font-size: 24px;
+      a {
+        text-decoration: none;
+        color: $orange;
+        &:hover {
+          text-decoration: underline;
         }
+        &.active {
+          text-decoration: underline;
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    ul {
+      li {
+        margin: 0 0 0 30px;
+      }
+    }
+  }
 }

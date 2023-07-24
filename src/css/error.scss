@@ -1,24 +1,40 @@
 @import "variables";
 
 .errorpage {
-    font-family: $font-montserrat;
-    color: $orange; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: $font-montserrat;
+  color: $orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  h1 {
+    font-size: 288px;
+    margin: 5% 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 5%;
+  }
+
+  a {
+    font-size: 18px;
+    color: $orange;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 880px) {
+  .errorpage {
     h1 {
-        font-size: 288px;
-        margin: 5% 0;
+      font-size: 96px;
     }
-
     h2 {
-        font-size: 36px; 
-        margin-bottom: 5%;
+      font-size: 18px;
     }
 
     a {
-        color: $orange; 
-        margin-bottom: 5%;
+      font-size: 14px;
     }
+  }
 }

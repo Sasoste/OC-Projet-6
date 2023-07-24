@@ -5,8 +5,7 @@
   color: $orange;
   display: flex;
   flex-direction: column;
-  width: 1240px;
-  align-items: center;
+  max-width: 1240px;
   margin: auto;
   font-size: 18px;
 
@@ -16,7 +15,6 @@
     width: 100%;
 
     .leftBlock {
-      flex: 1;
       display: flex;
       flex-direction: column;
 
@@ -73,6 +71,34 @@
 
     .wrapper {
       width: 47%;
+    }
+  }
+}
+
+@media (max-width: 1340px) {
+  .description {
+    margin: 0 3%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .description {
+    .block {
+      flex-direction: column;
+      .rightBlock {
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        margin-top: 10px;
+      }
+
+      }
+      .collapseBlock {
+        flex-direction: column;
+        .wrapper {
+          width: 100%;
+          margin: 2% 0;
+        }
     }
   }
 }
