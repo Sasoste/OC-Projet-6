@@ -1,3 +1,4 @@
+// On importe Link pour faire les liens de navigations
 import { Link } from 'react-router-dom';
 import "../css/error.scss";
 

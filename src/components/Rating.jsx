@@ -4,6 +4,8 @@ import Logements from "../logements.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
+
+// on utilise useParams pour récupérer l'id qui est dans l'url, et on utilise l'id pour récupérer le rating du logement
 function Rating() {
   const { id } = useParams();
   const item = Logements.find((item) => item.id === id);

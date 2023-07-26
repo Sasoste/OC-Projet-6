@@ -17,13 +17,10 @@
     .leftBlock {
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
 
       .title {
         font-size: 36px;
-        margin-bottom: 15px;
-      }
-      .location {
-        margin-bottom: 30px;
       }
 
       .tag {
@@ -85,20 +82,28 @@
   .description {
     .block {
       flex-direction: column;
+
+      .leftBlock {
+        .title {
+          margin-bottom: 10px;
+        }
+        .location {
+          margin-bottom: 10px; 
+        }
+      }
       .rightBlock {
         align-items: center;
         justify-content: space-around;
         flex-direction: row-reverse;
         margin-top: 10px;
       }
-
+    }
+    .collapseBlock {
+      flex-direction: column;
+      .wrapper {
+        width: 100%;
+        margin: 2% 0;
       }
-      .collapseBlock {
-        flex-direction: column;
-        .wrapper {
-          width: 100%;
-          margin: 2% 0;
-        }
     }
   }
 }

@@ -6,15 +6,18 @@ import Rating from "./Rating";
 import Logements from "../logements.json";
 
 function Description() {
+  // on récupère l'id du logement grâce à l'url 
   const { id } = useParams();
   const item = Logements.find((item) => item.id === id);
 
+  // si aucun logement trouvé on renvoie sur la page erreur
   if (!item) {
     return <Navigate to="/error" />;
   }
 
+  // On sépare le nom du prénom pour l'affichage
   const firstName = item.host.name.split(" ")[0];
-  const lastName = item.host.name.split(" ").slice(1).join(" ");
+  const lastName = item.host.name.split(" ")[1];
 
   return (
     <div className="description">

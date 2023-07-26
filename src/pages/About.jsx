@@ -2,6 +2,7 @@ import Collapse from "../components/Collapse.jsx";
 import Banner from "../components/Banner.jsx";
 import "../css/about.scss";
 
+// on utilise le component Collapse, avec les données que l'on a rentré pour faire la page about
 function About() {
   return (
     <div className="about">
