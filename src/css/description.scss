@@ -78,13 +78,17 @@
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 800px) {
   .description {
+
+    font-size: 14px;
+
     .block {
       flex-direction: column;
 
       .leftBlock {
         .title {
+          font-size: 18px;
           margin-bottom: 10px;
         }
         .location {
@@ -93,9 +97,19 @@
       }
       .rightBlock {
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-direction: row-reverse;
         margin-top: 10px;
+
+        .host {
+          img {
+            height: 10vh;
+          }
+        }
+
+        .rating {
+          font-size: 18px;
+        }
       }
     }
     .collapseBlock {
