@@ -22,11 +22,31 @@ nav {
   }
 }
 
+@media (max-width: 800px) {
+  nav {
+    ul {
+      li {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
 @media (max-width: 600px) {
   nav {
     ul {
       li {
         margin: 0 0 0 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    ul {
+      li {
+        font-size: 18px;
       }
     }
   }
