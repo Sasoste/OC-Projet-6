@@ -41,16 +41,22 @@ function Carrousel() {
   return (
     <div className="carousel">
       <div className="overlay">
+        {length > 1 && (
         <button className="leftButton" onClick={handlePrevious}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
+        )}
         <img src={item.pictures[index]} alt={item.title} />
+        {length > 1 && (
         <button className="rightButton" onClick={handleNext}>
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
+        )}
+        {length > 1 && (
         <p className="counter">
           {index + 1} / {length}
         </p>
+        )}
       </div>
     </div>
   );

@@ -1,12 +1,15 @@
 import Collapse from "../components/Collapse.jsx";
 import Banner from "../components/Banner.jsx";
 import "../css/about.scss";
+import BannerAbout from "../assets/montagne.png";
 
 // on utilise le component Collapse, avec les données que l'on a rentré pour faire la page about
 function About() {
   return (
     <div className="about">
-      <Banner />
+      <Banner 
+        imageSrc={BannerAbout}
+      />
       <Collapse
         title="Fiabilité"
         content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
