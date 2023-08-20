@@ -19,7 +19,7 @@ const root = document.getElementById("root");
 // header et footer dans Router parce qu'ils sont partout et utilisent des éléments de react
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/OC-Projet-6">
       <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
